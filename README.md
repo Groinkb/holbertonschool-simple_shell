@@ -28,26 +28,30 @@ $ man ./man_1_simple_shell
 - **main.h** : the lists of all Macros, librairies and prototypes
 - **shell.c** The main fonction, to recieve input from CLI parse and execute it
 - **environ.c** : There are functions
-**1)** to change directory
-**2)** to change or add environment variables **3)** to delete an environment variable
-**4)** to print our environment and a function to exit built in
+* 1) Change directory
+* 2) Change or add environment variables
+* 3) Delete an environment variable
+* 4) Print our environment and a function to exit built in
 - **executor.c** : There is a function
-**1)** to fork process and replace the child with a new program, and a function
-**2)** to choose from an array of builtin functions
+* 1) Fork process and replace the child with a new program, and a function
+* 2) Choose from an array of builtin functions
 - **func_help.c** : There is functions created and used to help us. There are functions
-**1)** to concatenate two strings
-**2)** to reallocate a memory block
+* 1) Concatenate two strings
+* 2) Reallocate a memory block
 - **tokenizer.c** : We find functions to manage tokens. There are funtions
-**1)** to split the input string into a array of arguments (tokens)
-**2)** to split the environment variable PATH into an array of tokens
-**3)** to validate if PATH exists and to validate spaces, tabs and line breaks
+* 1) Split the input string into a array of arguments (tokens)
+* 2) Split the environment variable PATH into an array of tokens
+* 3) Validate if PATH exists and to validate spaces, tabs and line breaks
 
 ### What does our SHELL function do ?
 
-**First**, the parent process is created when the user runs the program. Then the isatty() function uses the open file descriptor referring to a terminal. If isatty() returns, the command prompt is displayed using write() with STDOUT_FILENO and waits for a user command line as input. When the user types a command, the getline() function reads an entire line from the stream and the strtok() function breaks the command into a non-empty token input.
-**Then** it created a separate child process using fork() that executes the entered command. Unless otherwise specified, the parent process waits for the child process to finish before continuing. After the command is marked, the excve() function brings it in and executes it, then frees all the memory allocated with free(). Finally, the program returns to the main process: it prints the prompt, and waits for another input from the user.
-**To further explain**, the tokenizer() function works in the same way as strtok(). It creates an array of pointers to store the arguments.
-**Finally**, this implementation of tokens is essential for our command prompt to continue to display after a successful execution or an error.
+* **First**, the parent process is created when the user runs the program. Then the isatty() function uses the open file descriptor referring to a terminal. If isatty() returns, the command prompt is displayed using write() with STDOUT_FILENO and waits for a user command line as input. When the user types a command, the getline() function reads an entire line from the stream and the strtok() function breaks the command into a non-empty token input.
+
+* **Then** it created a separate child process using fork() that executes the entered command. Unless otherwise specified, the parent process waits for the child process to finish before continuing. After the command is marked, the excve() function brings it in and executes it, then frees all the memory allocated with free(). Finally, the program returns to the main process: it prints the prompt, and waits for another input from the user.
+
+* **To further explain**, the tokenizer() function works in the same way as strtok(). It creates an array of pointers to store the arguments.
+
+* **Finally**, this implementation of tokens is essential for our command prompt to continue to display after a successful execution or an error.
 
 ## Authors :fist_right::fist_left:
 
