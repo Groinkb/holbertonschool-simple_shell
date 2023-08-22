@@ -28,20 +28,20 @@ $ man ./man_1_simple_shell
 - **main.h** : the lists of all Macros, librairies and prototypes
 - **shell.c** The main fonction, to recieve input from CLI parse and execute it
 - **environ.c** : There are functions
-* 1) Change directory
-* 2) Change or add environment variables
-* 3) Delete an environment variable
-* 4) Print our environment and a function to exit built in
+* :zero: Change directory
+* :one: Change or add environment variables
+* :two: Delete an environment variable
+* :three: Print our environment and a function to exit built in
 - **executor.c** : There is a function
-* 1) Fork process and replace the child with a new program, and a function
-* 2) Choose from an array of builtin functions
+* :zero: Fork process and replace the child with a new program, and a function
+* :one: Choose from an array of builtin functions
 - **func_help.c** : There is functions created and used to help us. There are functions
-* 1) Concatenate two strings
-* 2) Reallocate a memory block
+* :zero: Concatenate two strings
+* :one: Reallocate a memory block
 - **tokenizer.c** : We find functions to manage tokens. There are funtions
-* 1) Split the input string into a array of arguments (tokens)
-* 2) Split the environment variable PATH into an array of tokens
-* 3) Validate if PATH exists and to validate spaces, tabs and line breaks
+* :zero: Split the input string into a array of arguments (tokens)
+* :one: Split the environment variable PATH into an array of tokens
+* :two: Validate if PATH exists and to validate spaces, tabs and line breaks
 
 ### What does our SHELL function do ?
 
