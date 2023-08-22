@@ -2,88 +2,90 @@
 
 /**
  * str_concat - Concatenate two strings
- * @s1: String 1
- * @s2: String 1
+ * @s1: First string
+ * @s2: Second string
  * Return: Pointer to the concatenated string
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *s;
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+    char *concatenated_string;
+    unsigned int len_s1;
+    unsigned int len_s2;
+    unsigned int index;
 
-	if (s1 == NULL)
-		s1 = "";
+    if (s1 == NULL)
+        s1 = "";
 
-	if (s2 == NULL)
-		s2 = "";
+    if (s2 == NULL)
+        s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
-		continue;
+    for (len_s1 = 0; s1[len_s1] != '\0'; len_s1++)
+        continue;
 
-	for (j = 0; s2[j] != '\0'; j++)
-		continue;
+    for (len_s2 = 0; s2[len_s2] != '\0'; len_s2++)
+        continue;
 
-	j = j + 1;
+    len_s2 = len_s2 + 1;
 
-	s = malloc((i + j) * sizeof(char));
+    concatenated_string = malloc((len_s1 + len_s2) * sizeof(char));
 
-	if (s == NULL)
-		return (0);
+    if (concatenated_string == NULL)
+        return (0);
 
-	for (k = 0; k < (i + j) ; k++)
-	{
-		if (k < i)
-			s[k] = s1[k];
-		if (k >= i)
-			s[k] = s2[k - i];
-	}
-	return (s);
+    for (index = 0; index < (len_s1 + len_s2); index++)
+    {
+        if (index < len_s1)
+            concatenated_string[index] = s1[index];
+        if (index >= len_s1)
+            concatenated_string[index] = s2[index - len_s1];
+    }
+    return (concatenated_string);
 }
 
 /**
  * _realloc - Reallocate a memory block
- * @ptr: Pointer to array
+ * @ptr: Pointer to memory
  * @old_size: Old size
  * @new_size: New size
  * Return: A pointer to the allocated memory
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *s;
-	char *ptr1;
-	unsigned int i;
+    char *new_memory;
+    char *original_memory;
+    unsigned int copy_index;
 
-	ptr1 = (char *)ptr;
+    original_memory = (char *)ptr;
 
-	if (ptr == NULL)
-		return (malloc(new_size));
-	if (new_size == 0 && ptr != NULL)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	if (new_size == old_size)
-		return (ptr);
+    if (ptr == NULL)
+        return (malloc(new_size));
 
-	s = malloc((new_size) * sizeof(char));
-	if (s == NULL)
-	{
-		free(s);
-		return (NULL);
-	}
+    if (new_size == 0 && ptr != NULL)
+    {
+        free(ptr);
+        return (NULL);
+    }
 
-	if (new_size > old_size)
-	{
-		for (i = 0; i < old_size; i++)
-			s[i] = ptr1[i];
-	}
-	if (new_size < old_size)
-	{
-		for (i = 0; i < new_size; i++)
-			s[i] = ptr1[i];
-	}
-	free(ptr1);
-	return (s);
+    if (new_size == old_size)
+        return (ptr);
+
+    new_memory = malloc(new_size * sizeof(char));
+    if (new_memory == NULL)
+    {
+        free(new_memory);
+        return (NULL);
+    }
+
+    if (new_size > old_size)
+    {
+        for (copy_index = 0; copy_index < old_size; copy_index++)
+            new_memory[copy_index] = original_memory[copy_index];
+    }
+    if (new_size < old_size)
+    {
+        for (copy_index = 0; copy_index < new_size; copy_index++)
+            new_memory[copy_index] = original_memory[copy_index];
+    }
+    free(original_memory);
+    return (new_memory);
 }
