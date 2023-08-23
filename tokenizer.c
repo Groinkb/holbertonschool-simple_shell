@@ -33,8 +33,8 @@ char **hsh_tokenizer(char *input)
 			tokens = _realloc(tokens, buffer, newBuffer * sizeof(char *));
 			if (tokens == NULL)
 			{
-				free(tokens);
 				free(backup_tokens);
+				free(tokens);
 				exit(EXIT_FAILURE);
 				free(backup_tokens);
 			}
