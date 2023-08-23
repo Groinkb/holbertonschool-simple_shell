@@ -49,8 +49,8 @@ char **hsh_tokenizer(char *input)
 /*  comments for the tokenizer_path and validate_input functions... */
 
 /**
+ *  @input: String from imput
  * validate_spaces - Validate spaces, tabs, and line breaks
- * @input: String from input
  * Return: 0 if no spaces, tabs, or line breaks are found
  */
 int validate_spaces(char *input)
