@@ -46,7 +46,7 @@ char **hsh_tokenizer(char *input)
 	return (tokens);
 }
 
-/*  comments for the tokenizer_path and validate_input functions... */
+/*  comments for the tokenizer_path and validate_input functions.... */
 
 /**
  *  @input: String from imput
