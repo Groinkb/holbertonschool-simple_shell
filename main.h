@@ -49,7 +49,7 @@ int hsh_exit(char **args, char *input_stdin, int *exit_status);
 int main(int argc __attribute__((unused)),
 		 char **argv __attribute__((unused)));
 
-/*************************************************************************/
+/**************************************************************************/
 
 /* Tokenizers and validator */
 
