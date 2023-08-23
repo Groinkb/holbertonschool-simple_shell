@@ -8,8 +8,8 @@
 char **hsh_tokenizer(char *input)
 {
 	int buffer = BUFSIZE, newBuffer = 0, position = 0;
-	char **backup_tokens = NULL;
 	char **tokens = NULL, *token = NULL;
+	char **backup_tokens = NULL;
 
 	/* Allocate memory for the array of tokens */
 	tokens = malloc(buffer * sizeof(char *));
