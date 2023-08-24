@@ -63,3 +63,4 @@ $ man ./man_1_simple_shell
 
 This program is distributed under the terms of the Holberton license. :goat:
 :goat:
+.
