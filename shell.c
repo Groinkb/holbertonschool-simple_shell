@@ -13,7 +13,7 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 	char **arguments = NULL;
 	size_t size = 0;
 	char *input_stdin = NULL;
-	/* Check if we continue or exit the loop */
+
 	while (status_return && n != EOF)
 	{
 		size = 0;
