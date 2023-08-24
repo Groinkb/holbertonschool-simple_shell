@@ -1,8 +1,8 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * main - main loop of shell
- * Return: 0 on success
+ * Return: 0 on successs
  */
 
 int main(void)
