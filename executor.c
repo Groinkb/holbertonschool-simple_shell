@@ -3,7 +3,7 @@
 /**
  * hsh_execute - Fork process and execute a new program
  * @arguments: String of arguments (tokens)
- * @argv: Array of arguments
+ * @argv: Array of arguments..
  * @exit_status: Exit status
  * Return: Always 1 (success).
  */
@@ -45,8 +45,8 @@ int hsh_execute(char **arguments, char **argv, int *exit_status)
 }
 
 /**
- * hsh_execute_builtins - Execute built-in functions or external programs
- * @args: String of arguments (tokens)
+ * hsh_execute_builtins - Execute built-in functions or external programss
+ * @args: String of arguments (token)
  * @input_stdin: String from input
  * @argv: Array of arguments
  * @exit_status: Exit status
