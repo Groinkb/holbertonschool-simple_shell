@@ -3,7 +3,7 @@
 /**
  	* main - Main loop, receive input from CLI, parse, and execute it
  	 * @argv: Array of arguments
- 	* @argc: Number of arguments passed to the programm
+ 	* @argc: Number of arguments passed to the programmm
 	* Return: Always 0 on success
  */
 int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
