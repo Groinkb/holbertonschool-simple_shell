@@ -33,7 +33,7 @@ int hsh_cd(char **args, char *input_stdin, int *exit_status)
 
 	setenv("OLDPWD", previous_directory, 1);
 	setenv("PWD", getcwd(previous_directory, sizeof(previous_directory)), 1);
-	return 1;
+	return (1);
 }
 
 /**
@@ -61,7 +61,7 @@ int hsh_setenv(char **args, char *input_stdin, int *exit_status)
 	else if (num_tokens != 3)
 		fprintf(stderr, "Try using \"setenv [KEY] [VALUE]\"\n");
 
-	return 1;
+	return (1);
 }
 
 /**
@@ -88,7 +88,7 @@ int hsh_unsetenv(char **args, char *input_stdin, int *exit_status)
 	else if (num_tokens != 2)
 		fprintf(stderr, "Try using \"unsetenv [KEY]\"\n");
 
-	return 1;
+	return (1);
 }
 
 /**
@@ -109,12 +109,12 @@ int hsh_env(char **args, char *input_stdin, int *exit_status)
 	if (environ[i] == NULL)
 	{
 		printf("%s", "The built-in env is empty");
-		return 1;
+		return (1);
 	}
 	for (i = 0; environ[i]; i++)
 		printf("%s\n", environ[i]);
 
-	return 1;
+	return (1);
 }
 
 /**
@@ -141,7 +141,7 @@ int hsh_exit(char **args, char *input_stdin, int *exit_status)
 	if (args[2] != NULL)
 	{
 		fprintf(stderr, "exit: too many arguments\n");
-		return 0;
+		return (0);
 	}
 	exit_code = atoi(args[1]);
 	free(args);
