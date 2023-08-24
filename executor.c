@@ -47,8 +47,10 @@ int hsh_execute(char **arguments, char **argv, int *exit_status)
 /**
  * hsh_execute_builtins - Execute built-in functions or external programs
  * @args: String of arguments (tokens)
+
  * @input_stdin: String from input
  * @argv: Array of arguments
+
  * @exit_status: Exit status
  * Return: Status to stay (1) or exit the main loop (0)
  */
