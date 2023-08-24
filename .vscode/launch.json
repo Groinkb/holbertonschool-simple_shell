@@ -3,6 +3,7 @@
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
+
       "type": "cppvsdbg",
       "request": "launch",
       "args": [],
@@ -10,6 +11,7 @@
       "console": "externalTerminal",
       "cwd": "c:/Users/Benjamin/Desktop/HOLBERTON/C/holbertonschool-simple_shell",
       "program": "c:/Users/Benjamin/Desktop/HOLBERTON/C/holbertonschool-simple_shell/build/Debug/outDebug"
+
     }
   ]
 }
