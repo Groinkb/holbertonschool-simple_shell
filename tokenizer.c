@@ -11,21 +11,21 @@ char **hsh_tokenizer(char *input)
 	char **tokens = NULL, *token = NULL;
 	char **backup_tokens = NULL;
 
-	/* Allocate memory for the array of tokens */
+
 	tokens = malloc(buffer * sizeof(char *));
 	if (tokens == NULL)
 	{
 		fprintf(stderr, "memory allocation error\n");
 		exit(EXIT_FAILURE);
 	}
-	/* Tokenize the input string, checking for DELIM and replace them with \0 */
+
 	token = strtok(input, DELIM_I);
 	while (token != NULL)
 	{
 		tokens[position] = token;
 		position++;
 
-		/* Reallocate the array of tokens if necessary */
+
 		if (position >= buffer)
 		{
 			newBuffer = BUFSIZE * 2;
@@ -39,14 +39,14 @@ char **hsh_tokenizer(char *input)
 				free(backup_tokens);
 			}
 		}
-		/* Continue processing the input string after memory reallocation */
+
 		token = strtok(NULL, DELIM_I);
 	}
 	tokens[position] = NULL;
 	return (tokens);
 }
 
-/*  comments for the tokenizer_path and validate_input functions.... */
+
 
 /**
  *  @input: String from imput
