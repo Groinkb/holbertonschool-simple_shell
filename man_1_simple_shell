@@ -1,0 +1,127 @@
+.\" Man page for simple_shell
+.\" Indicate the man page number (1)
+
+.TH simple_shell "21-08-2023" "simple_shell"
+
+.SH NAME
+
+\fBsimple_shell\fR - Simulates a Simple UNIX shell to handle multiple commands
+
+.SH SYNOPSIS
+
+\fB./dav_shell##\fR [OPTIONS] [COMMAND_STRING | file]
+Holberton School
+
+.SH DESCRIPTION
+
+dav_shell means Developper Amateur Version Shell
+
+This program simulates a command interpreter based in Unix and LINUX with it is basic commands.
+through a terminal emulator and some executable instructions(shell scripts) the user can interact with this \fBsimple_shell.\fR
+This simple_shell is not supossed to be an exact imitation of the original Unix Shell. This doesn't cover all of the instructions the original does.
+
+.SH INVOCATION
+
+The prompt 'dav_shell->$ ' will appear on terminal. You could enter commands following the prompt. You can't handle multiple commands using ';' '&&' '||' specifiers. Once you have entered the commands you execute the commands finishing by pressing 'ENTER' key.
+
+.SH FEATURES
+
+* This program displays a prompt and wait for the user to type a command. A command line always ends with a new line (when user push ENTER key).
+
+* The prompt is displayed again each time a command has been executed.
+
+* When the user enters exit, Hell shell will end and returns the status 0.
+
+* When the user enters exit [status], Hell Shell will end and return the inputed status.
+
+* The user could stop the program using Ctrl+D (end of file).
+
+* The shell handles command lines with arguments and pathways.
+
+* The program prints the current enviroment when the user types env.
+
+* This program executes the most common shell commands as ls, pwd, rm, cp, mv, exit, env, etc... with arguments.
+
+* If an executable cannot be found, It prints an error message such as "not found" and display the prompt again.
+
+* The Hell Shell does NOT support wildcard characters such as ls *.dat in parameters (or commands).
+
+* This shell does NOT support pipes |, shell logical operators as && or ||, neither commands separator ;.
+
+
+.SH EXAMPLES_COMMANDS
+
+Note it is respective output.
+.br
+.\&
+.RS
+.TP
+.TP
+
+\fBls [OPTIONS..] - lists the the files and directories in the current directory
+
+.TP
+.LP
+dav_shell->$ ls
+.LP
+.TP
+.LP
+environ.c  README.md	executor.c  func_help.c  man_simple_shell  main.h  shell.c  tokenizer.c
+.LP
+.TP
+.br
+
+\fBecho [OPTIONS..] string.. - displays a line of text
+
+.TP
+.LP
+dav_shell->$ echo Go Holberton Thonon-les-bains !
+.LP
+.TP
+.LP
+Go Holberton Thonon-les-bains !
+.LP
+.TP
+
+\fBpwd [OPTIONS..] - Prints the working directory
+
+.TP
+.br
+.LP
+dav_shell->$ pwd
+.LP
+.TP
+.LP
+/workspaces/HolbertonCode/holbertonschool-simple_shell
+.LP
+.TP
+.br
+
+\fBCtrl + D\FR - quits the program
+
+.TP
+.LP
+dav_shell->$ ^D
+.LP
+.TP
+.LP
+username@username-hostname~/workspaces/HolbertonCode/holbertonschool-simple_shell$
+.LP
+.br
+
+.TP
+\fBexit\FR - exits the shell
+.TP
+.LP
+dav_Shell->$ exit
+.LP
+.TP
+.LP
+username@username-hostname~/workspaces/HolbertonCode/holbertonschool-simple_shell$
+
+.SH AUTHORS
+This manual was written by Benjamin Marchal <6713@holbertonstudents.com> and Raphael Schopfer <6740@holbertonstudents.com>.
+
+.SH COPYRIGHT
+Copyright \(co 2023 Holberton School.
+This program is distributed under the terms of the Holberton license.
