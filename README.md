@@ -1,3 +1,4 @@
+
 <div align="center">
     <h1>:recycle:holbertonschool-simple_shell:recycle:</h1>
 </div>
@@ -64,3 +65,8 @@ $ man ./man_1_simple_shell
 This program is distributed under the terms of the Holberton license. :goat:
 :goat:
 .
+
+# holbertonschool-simple_shell
+Repository for the simple-shell project.
+
+uppdate for develop branch 
