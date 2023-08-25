@@ -4,7 +4,7 @@
     <h1>:recycle:holbertonschool-simple_shell:recycle:</h1>
 </div>
 
-![Holberton School Logo](https://raw.githubusercontent.com/Groinkb/holbertonschool-simple_shell/feature/pictures/Photo%20Holberton.webp)
+![Holberton School Logo](https://raw.githubusercontent.com/Groinkb/holbertonschool-simple_shell/main/pictures/Photo%20Holberton.webp)
 
 ![UBUNTU](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 
@@ -22,7 +22,7 @@ $ man ./man_1_simple_shell
 
 ## Flowchart
 
-![Flowchart](https://github.com/Groinkb/holbertonschool-simple_shell/blob/feature/pictures/Flowchart.jpg?raw=true)
+![Flowchart](https://github.com/Groinkb/holbertonschool-simple_shell/blob/main/pictures/Flowchart.jpg?raw=true)
 
 ### A brief description of our SHELL functions
 
@@ -44,6 +44,69 @@ $ man ./man_1_simple_shell
 * :zero: Split the input string into a array of arguments (tokens)
 * :one: Split the environment variable PATH into an array of tokens
 * :two: Validate if PATH exists and to validate spaces, tabs and line breaks
+
+### Exemples commands
+
+<details open>
+<summary> <strong> Lists the the files and directories in the current directory </strong> </summary>
+
+<br>
+
+```
+dav_shell->$ ls
+environ.c  README.md	executor.c  func_help.c  man_simple_shell  main.h  shell.c  tokenizer.c
+```
+
+</details>
+
+<details open>
+<summary> <strong> String.. - displays a line of text </strong> </summary>
+
+<br>
+
+```
+dav_shell->$ echo Go Holberton Thonon-les-bains !
+Go Holberton Thonon-les-bains !
+```
+
+</details>
+
+<details open>
+<summary> <strong> Prints the working directory </strong> </summary>
+
+<br>
+
+```
+dav_shell->$ pwd
+/workspaces/HolbertonCode/holbertonschool-simple_shell
+```
+
+</details>
+
+<details open>
+<summary> <strong> Quits the program </strong> </summary>
+
+<br>
+
+```
+dav_shell->$ ^D
+username@username-hostname~/workspaces/HolbertonCode/holbertonschool-simple_shell$
+```
+
+</details>
+
+<details open>
+<summary> <strong> Exits the shell </strong> </summary>
+
+<br>
+
+```
+dav_Shell->$ exit
+username@username-hostname~/workspaces/HolbertonCode/holbertonschool-simple_shell$
+```
+
+</details>
+
 
 ### What does our SHELL function do ?
 
